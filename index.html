@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!-- 
+  =========================================================
+  Designed and Developed by Rock Digital Solutions
+  Website: https://rockdigitals.com/
+  © 2024 Rock Digital Solutions - All Rights Reserved
+  =========================================================
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task Manager is a simple task management application built with HTML, CSS, and JavaScript.">
+    <meta name="keywords" content="task manager">
+    <title>Task Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4">Task Manager</h1>
+        
+        <!-- Add Task Form -->
+        <div class="mb-4">
+            <input id="task-name" type="text" placeholder="Task Name" class="p-2 border rounded w-full mb-2">
+            <select id="task-category" class="p-2 border rounded w-full mb-2">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+            <input id="task-date" type="date" class="p-2 border rounded w-full mb-2">
+            <button id="add-task" class="bg-blue-500 text-white px-4 py-2 rounded">Add Task</button>
+        </div>
+        
+        <!-- Filter Tasks -->
+        <div class="mb-4">
+            <label for="filter-category" class="block mb-2">Filter by Category:</label>
+            <select id="filter-category" class="p-2 border rounded w-full">
+                <option value="">All</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <!-- Task List -->
+        <ul id="tasks" class="space-y-2"></ul>
+        
+        <!-- Progress Tracker -->
+        <div id="task-progress" class="mt-4 text-lg font-semibold">
+            Progress: 0 / 0 tasks completed
+        </div>
+        
+        <!-- Dark Mode Toggle -->
+        <button id="dark-mode-toggle" class="bg-gray-800 text-white px-4 py-2 rounded mt-4">Toggle Dark Mode</button>
+    </div>
+</body>
+</html>
